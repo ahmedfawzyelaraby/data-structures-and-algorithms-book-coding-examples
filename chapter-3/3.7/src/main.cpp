@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include <stdlib.h>
 
 struct binarySearchTreeNode{
@@ -39,6 +40,33 @@ void postOrderTraversal(binarySearchTreeNode* currentNode){
 	}
 }
 
+void inOrderTraversal(binarySearchTreeNode* currentNode){
+	if(currentNode != NULL){
+		inOrderTraversal(currentNode->leftNode);
+		std::cout << currentNode->nodeValue << "->";
+		inOrderTraversal(currentNode->rightNode);
+	}
+}
+
+void breadthFirstTraversal(binarySearchTreeNode* currentNode){
+	std::vector<binarySearchTreeNode*> bstQueue;
+	int queueCounter = 0;
+	while(currentNode != NULL){
+		std::cout << currentNode->nodeValue << "->";
+		if(currentNode->leftNode != NULL)
+			bstQueue.push_back(currentNode->leftNode);
+		if(currentNode->rightNode != NULL)
+			bstQueue.push_back(currentNode->rightNode);
+
+		if(bstQueue.size() > 0){
+			currentNode = bstQueue[queueCounter];
+			queueCounter++;
+		}else{
+			currentNode = NULL;
+		}
+	}
+}
+
 int main(int argc, char** argv){
 	if(argc <= 1){
 		std::cout << "Invalid input" << std::endl;
@@ -61,6 +89,10 @@ int main(int argc, char** argv){
 	preOrderTraversal(root);
 	std::cout << std::endl;
 	postOrderTraversal(root);
+	std::cout << std::endl;
+	inOrderTraversal(root);
+	std::cout << std::endl;
+	breadthFirstTraversal(root);
 	std::cout << std::endl;
 
 	return 0;
