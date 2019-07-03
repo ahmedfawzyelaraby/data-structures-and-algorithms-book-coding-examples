@@ -1,4 +1,4 @@
 CMAKE_MINIMUM_REQUIRED  (VERSION 2.8.3)
-PROJECT(avl-tree-insertion)
+PROJECT(avl-tree-rotation)
 
 ADD_EXECUTABLE(${PROJECT_NAME} src/main.cpp)
