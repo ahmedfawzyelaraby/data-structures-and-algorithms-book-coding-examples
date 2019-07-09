@@ -52,9 +52,9 @@ int getHeight(avlTreeNode* currentNode){
 }
 
 avlTreeNode* checkBalance(avlTreeNode* startNode){
-	if(getHeight(startNode) == -1)
+	if(getHeight(startNode) == -1){
 		return startNode;
-	else{
+	}else{
 		if(startNode->leftNode == NULL){
 			if((-2 - getHeight(startNode->rightNode)) < -1){
 				if(startNode->rightNode->leftNode == NULL){
@@ -66,6 +66,8 @@ avlTreeNode* checkBalance(avlTreeNode* startNode){
 				}else{
 					return rotateLeft(rotateRight(startNode));
 				}
+			}else{
+				return startNode;
 			}
 		}else if(startNode->rightNode == NULL){
 			if((getHeight(startNode->leftNode) - -2) > 1){
@@ -78,6 +80,8 @@ avlTreeNode* checkBalance(avlTreeNode* startNode){
 				}else{
 					return rotateRight(rotateLeft(startNode));
 				}
+			}else{
+				return startNode;
 			}
 		}else if((getHeight(startNode->leftNode) - getHeight(startNode->rightNode)) > 1){
 			if(startNode->leftNode->leftNode == NULL){
