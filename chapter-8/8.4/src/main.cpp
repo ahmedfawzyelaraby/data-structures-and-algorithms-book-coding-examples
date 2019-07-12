@@ -28,7 +28,7 @@ int main(int argc, char** argv){
 
 	arrayToSort = insertionSort(arrayToSort);
 
-	for(int iterator = 1; iterator < arrayToSort.size(); iterator++){
+	for(int iterator = 0; iterator < arrayToSort.size(); iterator++){
 		std::cout << arrayToSort[iterator] << "->";
 	}
 	std::cout << std::endl;
