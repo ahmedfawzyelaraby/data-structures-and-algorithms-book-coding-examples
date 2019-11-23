@@ -4,29 +4,31 @@
 
 std::string reverseWords(std::string inString){
 	std::string result = "";
-	std::string whiteSpace = " ";
+	char whiteSpace = ' ';
 
 	int last = inString.length();
 	int start = last;
+
 	while(last >= 0){
-		while((start >= 0) && (inString[start] == ' '))
+		while((start >= 0) && (inString[start] == whiteSpace))
 			start--;
+		
 		last = start;
 
-		while((start >= 0) && (inString[start] != ' '))
+		while((start >= 0) && (inString[start] != whiteSpace))
 			start--;
-
-		for(int iterator = start + 1; iterator <= last; iterator++)
-			result += inString[iterator];
-
+		
+		for(int i = start + 1; i <= last; i++)
+			result += inString[i];
+		
 		if(start > 0)
-			result += " ";
-
+			result += whiteSpace;
+		
 		last = start - 1;
 		start = last;
 	}
 
-	if(result[result.length() - 1] == ' ')
+	if(result[result.length() - 1] == whiteSpace)
 		result = result.substr(0, result.length() - 1);
 
 	return result;
