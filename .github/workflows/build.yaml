@@ -1,0 +1,17 @@
+name: Build All Examples
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install Dependencies
+      run: apt update && apt install cmake build-essential
+    - name: Build 2.1.1 Examples
+      working-directory: ./chapter-2/2.2.1/
+      run: mkdir build && cd build && cmake .. && make
+      
