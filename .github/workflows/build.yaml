@@ -12,6 +12,11 @@ jobs:
     - name: Build 2.1.1 Example
       working-directory: ./chapter-2/2.1.1/
       run: mkdir build && cd build && cmake .. && make
+    - name: Add 2.1.1 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 2.1.1
+        path: ./chapter-2/2.1.1/build/singly-linked-list-insertion
     - name: Build 2.1.2 Example
       working-directory: ./chapter-2/2.1.2/
       run: mkdir build && cd build && cmake .. && make
