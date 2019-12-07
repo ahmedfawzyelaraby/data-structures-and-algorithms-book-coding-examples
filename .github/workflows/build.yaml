@@ -73,3 +73,59 @@ jobs:
       with:
         name: 2.2.3
         path: ./chapter-2/2.2.3/build/doubly-linked-list-traversal
+    - name: Build 3.1 Example
+      working-directory: ./chapter-3/3.1/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 3.1 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 3.1
+        path: ./chapter-3/3.1/build/binary-search-tree-insertion
+    - name: Build 3.2 Example
+      working-directory: ./chapter-3/3.2/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 3.2 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 3.2
+        path: ./chapter-3/3.2/build/binary-search-tree-searching
+    - name: Build 3.3 Example
+      working-directory: ./chapter-3/3.3/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 3.3 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 3.3
+        path: ./chapter-3/3.3/build/binary-search-tree-deletion
+    - name: Build 3.4 Example
+      working-directory: ./chapter-3/3.4/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 3.4 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 3.4
+        path: ./chapter-3/3.4/build/binary-search-tree-find-parent
+    - name: Build 3.5 Example
+      working-directory: ./chapter-3/3.5/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 3.5 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 3.5
+        path: ./chapter-3/3.5/build/binary-search-tree-find-node
+    - name: Build 3.6 Example
+      working-directory: ./chapter-3/3.6/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 3.6 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 3.6
+        path: ./chapter-3/3.6/build/binary-search-tree-min-max
+    - name: Build 3.7 Example
+      working-directory: ./chapter-3/3.7/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 3.7 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 3.7
+        path: ./chapter-3/3.7/build/binary-search-tree-traversal
