@@ -129,3 +129,27 @@ jobs:
       with:
         name: 3.7
         path: ./chapter-3/3.7/build/binary-search-tree-traversal
+    - name: Build 4.1 Example
+      working-directory: ./chapter-4/4.1/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 4.1 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 4.1
+        path: ./chapter-4/4.1/build/heap-insertion
+    - name: Build 4.2 Example
+      working-directory: ./chapter-4/4.2/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 4.2 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 4.2
+        path: ./chapter-4/4.2/build/heap-deletion
+    - name: Build 4.3 Example
+      working-directory: ./chapter-4/4.3/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 4.3 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 4.3
+        path: ./chapter-4/4.3/build/heap-searching
