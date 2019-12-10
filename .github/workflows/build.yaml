@@ -153,3 +153,11 @@ jobs:
       with:
         name: 4.3
         path: ./chapter-4/4.3/build/heap-searching
+    - name: Build 5 Example
+      working-directory: ./chapter-5/5/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 5 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 5
+        path: ./chapter-5/5/build/set-union-and-intersection
