@@ -161,3 +161,35 @@ jobs:
       with:
         name: 5
         path: ./chapter-5/5/build/set-union-and-intersection
+    - name: Build 7.1 Example
+      working-directory: ./chapter-7/7.1/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 7.1 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 7.1
+        path: ./chapter-7/7.1/build/avl-tree-insertion
+    - name: Build 7.2 Example
+      working-directory: ./chapter-7/7.2/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 7.2 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 7.2
+        path: ./chapter-7/7.2/build/avl-tree-balancing
+    - name: Build 7.3 Example
+      working-directory: ./chapter-7/7.3/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 7.3 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 7.3
+        path: ./chapter-7/7.3/build/avl-tree-insertion
+    - name: Build 7.4 Example
+      working-directory: ./chapter-7/7.4/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 7.4 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 7.4
+        path: ./chapter-7/7.4/build/avl-tree-deletion
