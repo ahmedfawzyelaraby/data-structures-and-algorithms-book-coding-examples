@@ -168,7 +168,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: 7.1
-        path: ./chapter-7/7.1/build/avl-tree-insertion
+        path: ./chapter-7/7.1/build/avl-tree-rotation
     - name: Build 7.2 Example
       working-directory: ./chapter-7/7.2/
       run: mkdir build && cd build && cmake .. && make
