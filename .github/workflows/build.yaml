@@ -193,3 +193,51 @@ jobs:
       with:
         name: 7.4
         path: ./chapter-7/7.4/build/avl-tree-deletion
+    - name: Build 8.1 Example
+      working-directory: ./chapter-8/8.1/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 8.1 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 8.1
+        path: ./chapter-8/8.1/build/bubble-sort
+    - name: Build 8.2 Example
+      working-directory: ./chapter-8/8.2/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 8.2 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 8.2
+        path: ./chapter-8/8.2/build/merge-sort
+    - name: Build 8.3 Example
+      working-directory: ./chapter-8/8.3/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 8.3 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 8.3
+        path: ./chapter-8/8.3/build/quick-sort
+    - name: Build 8.4 Example
+      working-directory: ./chapter-8/8.4/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 8.4 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 8.4
+        path: ./chapter-8/8.4/build/insertion-sort
+    - name: Build 8.5 Example
+      working-directory: ./chapter-8/8.5/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 8.5 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 8.5
+        path: ./chapter-8/8.5/build/shell-sort
+    - name: Build 8.6 Example
+      working-directory: ./chapter-8/8.6/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 8.6 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 8.6
+        path: ./chapter-8/8.6/build/radix-sort
