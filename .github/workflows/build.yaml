@@ -273,3 +273,19 @@ jobs:
       with:
         name: 9.5
         path: ./chapter-9/9.5/build/factorial
+    - name: Build 10.1 Example
+      working-directory: ./chapter-10/10.1/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 10.1 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 10.1
+        path: ./chapter-10/10.1/build/sequential-search
+    - name: Build 10.2 Example
+      working-directory: ./chapter-10/10.2/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 10.2 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 10.2
+        path: ./chapter-10/10.2/build/probability-search
