@@ -289,3 +289,43 @@ jobs:
       with:
         name: 10.2
         path: ./chapter-10/10.2/build/probability-search
+    - name: Build 11.1 Example
+      working-directory: ./chapter-11/11.1/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 11.1 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 11.1
+        path: ./chapter-11/11.1/build/reverse-words
+    - name: Build 11.2 Example
+      working-directory: ./chapter-11/11.2/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 11.2 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 11.2
+        path: ./chapter-11/11.2/build/palindrome-words
+    - name: Build 11.3 Example
+      working-directory: ./chapter-11/11.3/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 11.3 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 11.3
+        path: ./chapter-11/11.3/build/count-words
+    - name: Build 11.4 Example
+      working-directory: ./chapter-11/11.4/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 11.4 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 11.4
+        path: ./chapter-11/11.4/build/count-repeated-words
+    - name: Build 11.5 Example
+      working-directory: ./chapter-11/11.5/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 11.5 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 11.5
+        path: ./chapter-11/11.5/build/first-char-match
