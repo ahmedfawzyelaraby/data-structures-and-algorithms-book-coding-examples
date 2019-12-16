@@ -265,14 +265,6 @@ jobs:
       with:
         name: 9.3
         path: ./chapter-9/9.3/build/greatest-common-denominator
-    - name: Build 9.3 Example
-      working-directory: ./chapter-9/9.3/
-      run: mkdir build && cd build && cmake .. && make
-    - name: Add 9.3 Example Artifact
-      uses: actions/upload-artifact@v1
-      with:
-        name: 9.3
-        path: ./chapter-9/9.3/build/greatest-common-denominator
     - name: Build 9.5 Example
       working-directory: ./chapter-9/9.5/
       run: mkdir build && cd build && cmake .. && make
