@@ -272,4 +272,4 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: 9.5
-        path: ./chapter-9/9.5/build/greatest-common-denominator
+        path: ./chapter-9/9.5/build/factorial
