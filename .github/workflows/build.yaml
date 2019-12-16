@@ -241,3 +241,43 @@ jobs:
       with:
         name: 8.6
         path: ./chapter-8/8.6/build/radix-sort
+    - name: Build 9.1 Example
+      working-directory: ./chapter-9/9.1/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 9.1 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 9.1
+        path: ./chapter-9/9.1/build/primary-numbers
+    - name: Build 9.2 Example
+      working-directory: ./chapter-9/9.2/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 9.2 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 9.2
+        path: ./chapter-9/9.2/build/integer-to-binary
+    - name: Build 9.3 Example
+      working-directory: ./chapter-9/9.3/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 9.3 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 9.3
+        path: ./chapter-9/9.3/build/greatest-common-denominator
+    - name: Build 9.3 Example
+      working-directory: ./chapter-9/9.3/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 9.3 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 9.3
+        path: ./chapter-9/9.3/build/greatest-common-denominator
+    - name: Build 9.5 Example
+      working-directory: ./chapter-9/9.5/
+      run: mkdir build && cd build && cmake .. && make
+    - name: Add 9.5 Example Artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: 9.5
+        path: ./chapter-9/9.5/build/greatest-common-denominator
